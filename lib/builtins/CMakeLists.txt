@@ -201,7 +201,7 @@ if(APPLE)
     atomic_thread_fence.c)
 endif()
 
-if (HAVE_UNWIND_H)
+if (HAVE_UNWIND_H AND NOT MSP430)
   set(GENERIC_SOURCES
       ${GENERIC_SOURCES}
       gcc_personality_v0.c)
